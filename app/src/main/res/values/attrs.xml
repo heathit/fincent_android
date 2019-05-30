@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItem">
+        <attr name="title" format="reference|string" />
+        <attr name="desc" format="reference|string" />
+        <attr name="chked" format="boolean" />
+        <attr name="itemType" format="enum">
+            <enum name="switchBtn" value="1"/>
+            <enum name="link" value="2"/>
+            <enum name="btn" value="3"/>
+            <enum name="version" value="4"/>
+        </attr>
+    </declare-styleable>
+</resources>

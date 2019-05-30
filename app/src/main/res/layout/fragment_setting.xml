@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent" android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_action_bar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_title"
+            android:fontFamily="@font/font_nanum_square"
+            android:textSize="18dp"
+            android:textColor="@color/text_action_bar"
+            />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="14dp" android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/top_left"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:id="@+id/btn_option"
+            android:layout_width="20dp" android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/top_menu"
+            android:onClick="onClick"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:background="@color/color_bg_gray"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--알림수신-->
+            <RelativeLayout
+                android:layout_width="match_parent" android:layout_height="42dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/setting_alarm_title"
+                    android:fontFamily="@font/font_nanum_gothic_bold"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_setting_sub_title"
+                    />
+
+                <View
+                    android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_setting_alarm_border"/>
+            </RelativeLayout>
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_alarm_comp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_alarm_comp"
+                app:desc="@string/setting_alarm_comp_desc"
+                app:chked="true"
+                app:itemType="switchBtn"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_alarm_app"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_alarm_app"
+                app:desc="@string/setting_alarm_app_desc"
+                app:chked="true"
+                app:itemType="switchBtn"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_alarm_notice"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_alarm_notice"
+                app:desc="@string/setting_alarm_notice_desc"
+                app:chked="true"
+                app:itemType="switchBtn"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent" android:layout_height="7dp"
+                android:background="@color/color_bg_gray"
+                >
+                <View
+                    android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_setting_alarm_border"/>
+            </RelativeLayout>
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_login_setting"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_login_title"
+                app:itemType="link"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_login_number"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_login_number"
+                app:chked="true"
+                app:itemType="switchBtn"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_login_finger"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_login_finger"
+                app:chked="true"
+                app:itemType="switchBtn"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_certificate"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_certificate"
+                app:itemType="link"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_authority"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_authority"
+                app:itemType="link"
+                />
+
+            <com.nice.fincent.widget.SettingItem
+                android:id="@+id/btn_version"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:title="@string/setting_version"
+                app:itemType="version"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

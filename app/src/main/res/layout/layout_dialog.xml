@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_dialog_main"
+        android:orientation="vertical"
+        >
+        <!--header-->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="#000"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                />
+
+        </LinearLayout>
+        <!--body-->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_dialog_msg"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="12dp"
+                android:textColor="#222222"
+                android:fontFamily="@font/font_nanum_gothic"
+                />
+
+            <TextView
+                android:id="@+id/tv_dialog_add"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="12dp"
+                android:textColor="#999999"
+                android:fontFamily="@font/font_nanum_gothic"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_dialog_code"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="12dp"
+                android:textColor="#fa4a3d"
+                android:fontFamily="@font/font_nanum_gothic"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--btns-->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="37dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_dialog_l"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:text="취소"
+            android:textSize="13dp"
+            android:textColor="#222222"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            android:background="@drawable/bg_dialog_bottom_l"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_dialog_r"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:text="확인"
+            android:textSize="13dp"
+            android:textColor="#222222"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            android:background="@drawable/bg_dialog_bottom_r"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:text="확인"
+            android:textSize="13dp"
+            android:textColor="#222222"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            android:background="@drawable/bg_dialog_bottom"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

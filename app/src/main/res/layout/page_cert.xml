@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp" android:layout_height="wrap_content"
+    android:background="@drawable/bg_cert"
+    >
+
+    <ImageView
+        android:id="@+id/icon_cert"
+        android:layout_width="28dp" android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_certify"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/tv_cert_name"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_cert"
+        android:layout_toRightOf="@id/icon_cert"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"
+        android:textColor="@color/text_cert_name"
+        android:fontFamily="@font/font_nanum_gothic_bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_issuer_label"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cert_name"
+        android:layout_alignLeft="@id/tv_cert_name"
+        android:layout_marginTop="15dp"
+        android:text="@string/cert_issue"
+        android:textSize="13dp"
+        android:textColor="@color/text_cert_label"
+        android:fontFamily="@font/font_nanum_gothic"
+        />
+    <TextView
+        android:id="@+id/tv_issuer_text"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_issuer_label"
+        android:layout_toRightOf="@id/tv_issuer_label"
+        android:textSize="13dp"
+        android:textColor="@color/text_cert_text"
+        android:fontFamily="@font/font_nanum_gothic"
+        />
+
+    <TextView
+        android:id="@+id/tv_expire_label"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_below="@id/tv_issuer_label"
+        android:layout_alignLeft="@id/tv_cert_name"
+        android:layout_marginTop="15dp"
+        android:text="@string/cert_expire_date"
+        android:textSize="13dp"
+        android:textColor="@color/text_cert_label"
+        android:fontFamily="@font/font_nanum_gothic"
+        />
+    <TextView
+        android:id="@+id/tv_expire_text"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_expire_label"
+        android:layout_toRightOf="@id/tv_expire_label"
+        android:textSize="13dp"
+        android:textColor="@color/text_cert_text"
+        android:fontFamily="@font/font_nanum_gothic"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/color_bg_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_action_bar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/cert_copy_title"
+            android:fontFamily="@font/font_nanum_square"
+            android:textSize="15dp"
+            android:textColor="@color/text_action_bar"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="23dp" android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_close"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="onClick"
+            />
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_setting_alarm_title_border"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="230dp" android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_certify"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cert_copy_cert_num"
+            android:textSize="15dp"
+            android:textColor="@color/text_cert_name"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_cert_uid1"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/text_cert_number"
+                android:background="@drawable/bg_cert_number"
+                />
+
+            <TextView
+                android:layout_width="18dp" android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="12dp"
+                android:textColor="@color/text_cert_number"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_uid2"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/text_cert_number"
+                android:background="@drawable/bg_cert_number"
+                />
+
+            <TextView
+                android:layout_width="18dp" android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="12dp"
+                android:textColor="@color/text_cert_number"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_uid3"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/text_cert_number"
+                android:background="@drawable/bg_cert_number"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/color_cert_copy_guide"
+            >
+
+            <TextView
+                android:id="@+id/tv_cert_guide_title"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="1dp"
+                android:text="@string/cert_copy_guide_title"
+                android:textSize="15dp"
+                android:textColor="@color/text_cert_copy_guide"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step1"
+                android:layout_width="66dp" android:layout_height="23dp"
+                android:layout_below="@id/tv_cert_guide_title"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="STEP 01"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_step"
+                android:background="@drawable/bg_cert_guide_step"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step1_text"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_cert_guide_step1"
+                android:layout_alignTop="@id/tv_cert_guide_step1"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cert_copy_guide_step1"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_guide"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step2"
+                android:layout_width="66dp" android:layout_height="23dp"
+                android:layout_below="@id/tv_cert_guide_step1_text"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="27dp"
+                android:gravity="center"
+                android:text="STEP 02"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_step"
+                android:background="@drawable/bg_cert_guide_step"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step2_text"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_cert_guide_step2"
+                android:layout_alignTop="@id/tv_cert_guide_step2"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cert_copy_guide_step2"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_guide"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step3"
+                android:layout_width="66dp" android:layout_height="23dp"
+                android:layout_below="@id/tv_cert_guide_step2_text"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="27dp"
+                android:gravity="center"
+                android:text="STEP 03"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_step"
+                android:background="@drawable/bg_cert_guide_step"
+                />
+
+            <TextView
+                android:id="@+id/tv_cert_guide_step3_text"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_cert_guide_step3"
+                android:layout_alignTop="@id/tv_cert_guide_step3"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cert_copy_guide_step3"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_copy_guide"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_cert"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/cert_copy_btn"
+            android:textSize="14dp"
+            android:textColor="@color/text_cert_btn"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            android:background="@color/color_cert_copy_btn"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+</RelativeLayout>

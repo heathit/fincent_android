@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript">
+    function test1(){
+        window.fincent.test1();
+    }
+
+    function showFingerprint(){
+        window.fincent.showFingerprint();
+    }
+
+    function showSetting(){
+        window.fincent.showSetting();
+    }
+    function showLoginSelect(){
+        window.fincent.showLoginSelect();
+    }
+
+    function chkPlatform(){
+        var s = true;
+        try{
+            s = window.fincent.chkPlatform();
+        }catch(e){}
+        console.log('>>>>>> ' + s);
+
+        alert('>>>>>> ' + s);
+    }
+</script>
+
+<body>
+
+<input type="button" value="TEST1" onclick="test1()">
+<br>
+<br>
+<input type="button" value="chkPlatform" onclick="chkPlatform()">
+<br>
+<br>
+<input type="button" value="지문인증" onclick="showFingerprint()">
+<br>
+<br>
+<a href="tel:02-6105-8000">전화걸기</a>
+<br>
+<br>
+<input type="button" value="설정" onclick="showSetting()">
+<br>
+<br>
+<input type="button" value="로그인 선택" onclick="showLoginSelect()">
+<br>
+<br>
+
+
+
+</body>
+</html>

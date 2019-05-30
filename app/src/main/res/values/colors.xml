@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="text_action_bar">#222222</color>
+    <color name="text_setting_sub_title">#555555</color>
+    <color name="text_setting_name">#222222</color>
+    <color name="text_setting_desc">#999999</color>
+    <color name="text_setting_version_text">#555555</color>
+    <color name="text_setting_version_btn">#ffffff</color>
+    <color name="text_login_select">#222222</color>
+
+    <color name="text_cert_btn">#ffffff</color>
+    <color name="text_cert_name">#222222</color>
+    <color name="text_cert_label">#999999</color>
+    <color name="text_cert_text">#222222</color>
+    <color name="text_cert_number">#555555</color>
+    <color name="text_cert_copy_guide">#222222</color>
+    <color name="text_cert_copy_step">#ffffff</color>
+
+    <color name="color_bg_white">#fff</color>
+    <color name="color_bg_gray">#e8ecee</color>
+
+    <color name="color_action_bar">#fff</color>
+    <color name="color_setting_bg">#fff</color>
+    <color name="color_setting_sub_title">#e8ecee</color>
+    <color name="color_setting_version_text">#e0e0e0</color>
+    <color name="color_setting_version_btn">#989da9</color>
+
+    <color name="color_setting_alarm_bg">#f4f4f4</color>
+    <color name="color_setting_alarm_title_border">#31b16c</color>
+    <color name="color_setting_alarm_border">#e0e0e0</color>
+
+    <color name="color_cert_del_btn">#888</color>
+    <color name="color_cert_copy_btn">#1aa87a</color>
+
+    <color name="color_cert_copy_guide">#f8f8f8</color>
+
+    <color name="color_simple_pass_desc">#999999</color>
+    <color name="color_reg_fingerprint_guide">#222222</color>
+
+</resources>

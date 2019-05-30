@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/color_bg_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_action_bar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/cert_title"
+            android:fontFamily="@font/font_nanum_square"
+            android:textSize="15dp"
+            android:textColor="@color/text_action_bar"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="23dp" android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_close"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="onClick"
+            />
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_setting_alarm_title_border"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="220dp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="20dp"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent" android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_no_cert"
+            android:layout_width="match_parent" android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_cert"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/iv_no_cert"
+                android:layout_width="32dp" android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="34dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/icon_no_certify"
+                android:scaleType="fitCenter"
+                />
+
+            <TextView
+                android:id="@+id/tv_no_cert_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/iv_no_cert"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cert_empty_title"
+                android:textSize="15dp"
+                android:textColor="@color/text_cert_name"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_no_cert_desc"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_below="@id/tv_no_cert_name"
+                android:layout_alignLeft="@id/tv_no_cert_name"
+                android:layout_marginTop="15dp"
+                android:text="@string/cert_empty_desc"
+                android:textSize="13dp"
+                android:textColor="@color/text_cert_label"
+                android:fontFamily="@font/font_nanum_gothic"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_indicator"
+            android:layout_width="match_parent" android:layout_height="10dp"
+            android:layout_below="@id/view_pager"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:text="@string/cert_del_btn"
+                android:textSize="14dp"
+                android:textColor="@color/text_cert_btn"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                android:background="@color/color_cert_del_btn"
+                android:onClick="onClick"
+                />
+            <Button
+                android:id="@+id/btn_cert"
+                android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"
+                android:text="@string/cert_copy_btn"
+                android:textSize="14dp"
+                android:textColor="@color/text_cert_btn"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                android:background="@color/color_cert_copy_btn"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@color/color_bg_white"
+    >
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/font_nanum_gothic_bold"
+        android:textSize="14dp"
+        android:textColor="@color/text_setting_name"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_version"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_title"
+        android:layout_alignBottom="@id/tv_title"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <View
+            android:layout_width="1dp" android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/color_setting_alarm_border"
+            />
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:fontFamily="@font/font_nanum_gothic"
+            android:textColor="@color/text_setting_sub_title"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/font_nanum_gothic"
+        android:textSize="12dp"
+        android:textColor="@color/text_setting_desc"
+        android:visibility="gone"
+        />
+    <CheckBox
+        android:id="@+id/btn_switch"
+        android:layout_width="50dp" android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_btn_switch"
+        android:button="@null"
+        android:visibility="gone"
+        android:onClick="onClick"
+        />
+
+
+    <ImageButton
+        android:id="@+id/btn_move"
+        android:layout_width="18dp" android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:padding="5dp"
+        android:src="@drawable/btn_arrow"
+        android:scaleType="fitCenter"
+        android:background="#00000000"
+        android:visibility="gone"
+        android:onClick="onClick"
+        />
+
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="64dp" android:layout_height="21dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_setting_version_btn"
+        android:text="최신"
+        android:textColor="#fff"
+        android:textSize="13dp"
+        android:fontFamily="@font/font_nanum_square"
+        android:visibility="gone"
+        />
+
+    <View
+        android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_setting_alarm_border"/>
+</RelativeLayout>

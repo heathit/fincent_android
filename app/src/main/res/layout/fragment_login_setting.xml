@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/color_bg_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_action_bar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/setting_login_title"
+            android:fontFamily="@font/font_nanum_square"
+            android:textSize="15dp"
+            android:textColor="@color/text_action_bar"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="23dp" android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_close"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="onClick"
+            />
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_setting_alarm_title_border"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_setting_alarm_bg"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/color_setting_alarm_border"/>
+
+        <!--간편번호-->
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="54dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_login_number"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                android:textSize="14dp"
+                android:textColor="@color/text_setting_name"
+                />
+
+            <CheckBox
+                android:id="@+id/radio_number"
+                android:layout_width="16dp" android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_btn_radio"
+                android:button="@null"
+                android:onClick="onClick"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/color_setting_alarm_border"/>
+
+        <!--지문-->
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="54dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_login_finger"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                android:textSize="14dp"
+                android:textColor="@color/text_setting_name"
+                />
+
+            <CheckBox
+                android:id="@+id/radio_finger"
+                android:layout_width="16dp" android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_btn_radio"
+                android:button="@null"
+                android:onClick="onClick"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/color_setting_alarm_border"/>
+
+    </LinearLayout>
+</RelativeLayout>

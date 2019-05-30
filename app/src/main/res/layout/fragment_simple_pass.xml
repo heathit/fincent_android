@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/color_bg_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_action_bar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/simple_pass_title"
+            android:fontFamily="@font/font_nanum_square"
+            android:textSize="15dp"
+            android:textColor="@color/text_action_bar"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="23dp" android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_close"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:onClick="onClick"
+            />
+
+        <View
+            android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_setting_alarm_title_border"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_simple_pass"
+            >
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/simple_pass_guide"
+                android:textSize="15dp"
+                android:textColor="@color/text_cert_name"
+                android:fontFamily="@font/font_nanum_gothic_bold"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+
+                <CheckBox
+                    android:id="@+id/icon_number1"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+                <CheckBox
+                    android:id="@+id/icon_number2"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+                <CheckBox
+                    android:id="@+id/icon_number3"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+                <CheckBox
+                    android:id="@+id/icon_number4"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+                <CheckBox
+                    android:id="@+id/icon_number5"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+                <CheckBox
+                    android:id="@+id/icon_number6"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_ico_number"
+                    android:button="@null"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="16dp" android:layout_height="16dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/icon_number"
+                android:scaleType="fitCenter"
+                />
+
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:text="@string/simple_pass_desc"
+                android:textSize="13dp"
+                android:textColor="@color/color_simple_pass_desc"
+                android:fontFamily="@font/font_nanum_gothic"
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/btn_confirm"
+            android:textSize="14dp"
+            android:textColor="@color/text_cert_btn"
+            android:fontFamily="@font/font_nanum_gothic_bold"
+            android:background="@color/color_cert_copy_btn"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+</RelativeLayout>
